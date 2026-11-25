@@ -320,4 +320,22 @@ document.querySelectorAll('.mobile-bottom a').forEach(link=>{
   });
 });
 </script>
+<script>
+(function(){
+ function showDateTime(){
+  var d=new Date();
+  var date=document.getElementById('liveDate');
+  var time=document.getElementById('liveTime');
+  try {
+   if(date) date.textContent=d.toLocaleDateString('hi-IN',{timeZone:'Asia/Kolkata',weekday:'long',day:'numeric',month:'long',year:'numeric'});
+   if(time) time.textContent=d.toLocaleTimeString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:true});
+  } catch(e) {
+   if(date) date.textContent=d.toLocaleDateString('hi-IN');
+   if(time) time.textContent=d.toLocaleTimeString('en-IN');
+  }
+ }
+ showDateTime();
+ setInterval(showDateTime,1000);
+})();
+</script>
 </body></html>
