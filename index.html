@@ -338,4 +338,35 @@ document.querySelectorAll('.mobile-bottom a').forEach(link=>{
  setInterval(showDateTime,1000);
 })();
 </script>
-<script>// Exclusive accordion behavior for all main sections and their nested panels.\ndocument.querySelectorAll("details.info-section").forEach(function(panel){panel.addEventListener("toggle",function(){if(!panel.open)return;document.querySelectorAll("details.info-section").forEach(function(other){if(other!==panel)other.open=false;});});});\ndocument.querySelectorAll("details.inner-section").forEach(function(panel){panel.addEventListener("toggle",function(){if(!panel.open)return;panel.parentElement.querySelectorAll("details.inner-section").forEach(function(other){if(other!==panel)other.open=false;});});});\n</script>\n</body></html>
+<script>// Exclusive accordion behavior for all main sections and their nested panels.\ndocument.querySelectorAll("details.info-section").forEach(function(panel){panel.addEventListener("toggle",function(){if(!panel.open)return;document.querySelectorAll("details.info-section").forEach(function(other){if(other!==panel)other.open=false;});});});\ndocument.querySelectorAll("details.inner-section").forEach(function(panel){panel.addEventListener("toggle",function(){if(!panel.open)return;panel.parentElement.querySelectorAll("details.inner-section").forEach(function(other){if(other!==panel)other.open=false;});});});\n</script>\n<script>
+(function(){
+ var home=document.getElementById('home');
+ var mainPanels=Array.from(document.querySelectorAll('details.info-section'));
+ mainPanels.forEach(function(panel){
+  panel.addEventListener('toggle',function(){
+   if(!panel.open)return;
+   home.classList.add('detail-mode');
+   mainPanels.forEach(function(other){if(other!==panel)other.open=false;});
+   var content=panel.querySelector(':scope > .section-content');
+   if(content && !content.querySelector(':scope > .section-back')){
+    var back=document.createElement('button');back.type='button';back.className='section-back';back.textContent='← सभी अनुभाग';
+    back.addEventListener('click',function(){panel.open=false;home.classList.remove('detail-mode');});
+    content.insertBefore(back,content.firstChild);
+   }
+  });
+ });
+ document.querySelectorAll('details.inner-section').forEach(function(panel){
+  panel.addEventListener('toggle',function(){
+   if(!panel.open)return;
+   panel.parentElement.querySelectorAll(':scope > details.inner-section').forEach(function(other){if(other!==panel)other.open=false;});
+   var content=panel.querySelector(':scope > .inner-content');
+   if(content && !content.querySelector(':scope > .section-back')){
+    var back=document.createElement('button');back.type='button';back.className='section-back';back.textContent='← कथा एवं सत्संग';
+    back.addEventListener('click',function(){panel.open=false;});
+    content.insertBefore(back,content.firstChild);
+   }
+  });
+ });
+})();
+</script>
+</body></html>
