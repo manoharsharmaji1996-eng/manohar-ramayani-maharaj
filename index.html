@@ -204,6 +204,14 @@ footer{text-align:center;background:#32111a;color:#ddcdb8;padding:26px 15px;font
 .daily-date{font-size:11px;color:#8c7965;margin-top:9px}
 @media(max-width:640px){.daily-thought{margin:12px 0 5px;padding:17px 17px 15px;border-radius:13px}.daily-thought h2{font-size:20px}.daily-quote{font-size:17px;line-height:1.75}.daily-thought:after{right:12px;font-size:85px}}
 
+
+.live-datetime{margin:17px 0 0;padding:13px 19px;display:flex;align-items:center;justify-content:space-between;gap:12px;background:#fffdf8;border:1px solid #e8dcc8;border-radius:13px;box-shadow:0 5px 18px #42241a09}
+.live-datetime .dt-label{font-size:11px;font-weight:700;letter-spacing:1px;color:#997440}
+.live-datetime .dt-date{font:16px 'Tiro Devanagari Hindi',serif;color:var(--wine);margin-top:2px}
+.live-datetime .dt-time{font:700 24px 'Hind',sans-serif;color:#4c1a27;white-space:nowrap;font-variant-numeric:tabular-nums}
+.live-datetime .dt-zone{font-size:10px;color:#8c7965;text-align:right;margin-top:1px}
+@media(max-width:640px){.live-datetime{margin-top:11px;padding:11px 13px;border-radius:11px}.live-datetime .dt-date{font-size:13px}.live-datetime .dt-time{font-size:21px}.live-datetime .dt-label{font-size:10px}}
+
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://manohar-ramayani-maharaj.vercel.app/#website","url":"https://manohar-ramayani-maharaj.vercel.app/","name":"श्री मनोहर रामायणी जी महाराज","inLanguage":"hi-IN","description":"रामकथा, भक्ति, सत्संग और आध्यात्मिक संदेश।"},{"@type":"Person","@id":"https://manohar-ramayani-maharaj.vercel.app/#person","name":"श्री मनोहर रामायणी जी महाराज","url":"https://manohar-ramayani-maharaj.vercel.app/","knowsAbout":["श्रीराम कथा","रामचरितमानस","भक्ति","सत्संग"]}]}</script>
 </head>
@@ -219,6 +227,10 @@ footer{text-align:center;background:#32111a;color:#ddcdb8;padding:26px 15px;font
  <h2>आज का सुविचार</h2>
  <p class="daily-quote" id="dailyQuote">प्रेम, सेवा और सदाचार से ही जीवन में सच्ची सुंदरता आती है।</p>
  <div class="daily-date" id="dailyDate"></div>
+</section>
+<section class="live-datetime" aria-label="वर्तमान दिनांक और समय">
+ <div><div class="dt-label">आज की तिथि एवं वार</div><div class="dt-date" id="liveDate">तिथि लोड हो रही है…</div></div>
+ <div><div class="dt-time" id="liveTime">--:--:--</div><div class="dt-zone">भारतीय मानक समय · IST</div></div>
 </section>
 <h2 class="section-heading">मुख्य अनुभाग</h2>
 <div class="section-grid">
@@ -280,5 +292,16 @@ function updateDailyThought(){
  if(date) date.textContent=new Intl.DateTimeFormat('hi-IN',{timeZone:'Asia/Kolkata',day:'numeric',month:'long',year:'numeric'}).format(new Date())+' · आज का विचार';
 }
 updateDailyThought();
+
+function updateLiveDateTime(){
+ const now=new Date();
+ const dateEl=document.getElementById('liveDate');
+ const timeEl=document.getElementById('liveTime');
+ if(dateEl) dateEl.textContent=new Intl.DateTimeFormat('hi-IN',{timeZone:'Asia/Kolkata',weekday:'long',day:'numeric',month:'long',year:'numeric'}).format(now);
+ if(timeEl) timeEl.textContent=new Intl.DateTimeFormat('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:true}).format(now);
+}
+updateLiveDateTime();
+setInterval(updateLiveDateTime,1000);
+
 </script>
 </body></html>
