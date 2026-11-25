@@ -195,6 +195,15 @@ footer{text-align:center;background:#32111a;color:#ddcdb8;padding:26px 15px;font
 @media(max-width:900px){.section-home{padding:0 18px}.section-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){.section-home{margin:12px auto 78px;padding:0 10px}.intro-strip{padding:21px 18px;border-radius:14px;gap:10px}.intro-strip h1{font-size:24px;line-height:1.5}.intro-strip p{font-size:12px}.intro-symbol{font-size:43px}.section-heading{font-size:21px;margin:22px 3px 10px}.section-grid{grid-template-columns:1fr;gap:10px}.info-section{border-radius:12px}.info-section summary{min-height:76px;padding:13px 14px;gap:11px}.section-icon{width:42px;height:42px;border-radius:12px;font-size:21px}.section-label strong{font-size:17px}.section-label small{font-size:11px}.section-content{padding:14px 16px 17px;font-size:13px}.short-note{font-size:12px;margin-top:13px}}
 
+
+.daily-thought{position:relative;margin:18px 0 8px;padding:22px 26px 20px;border:1px solid #e7d5b5;border-radius:17px;background:linear-gradient(125deg,#fffaf0,#f2e5cd);box-shadow:0 8px 25px #42241a0b;overflow:hidden}
+.daily-thought:after{content:"❝";position:absolute;right:22px;top:-17px;font:110px Georgia,serif;color:#c49a5425}
+.daily-kicker{font-size:11px;letter-spacing:1.5px;font-weight:700;color:#9a7540}
+.daily-thought h2{font:23px 'Tiro Devanagari Hindi',serif;color:var(--wine);margin:4px 0 8px}
+.daily-quote{position:relative;z-index:1;font:20px/1.8 'Tiro Devanagari Hindi',serif;color:#52362c;margin:0;max-width:900px}
+.daily-date{font-size:11px;color:#8c7965;margin-top:9px}
+@media(max-width:640px){.daily-thought{margin:12px 0 5px;padding:17px 17px 15px;border-radius:13px}.daily-thought h2{font-size:20px}.daily-quote{font-size:17px;line-height:1.75}.daily-thought:after{right:12px;font-size:85px}}
+
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://manohar-ramayani-maharaj.vercel.app/#website","url":"https://manohar-ramayani-maharaj.vercel.app/","name":"श्री मनोहर रामायणी जी महाराज","inLanguage":"hi-IN","description":"रामकथा, भक्ति, सत्संग और आध्यात्मिक संदेश।"},{"@type":"Person","@id":"https://manohar-ramayani-maharaj.vercel.app/#person","name":"श्री मनोहर रामायणी जी महाराज","url":"https://manohar-ramayani-maharaj.vercel.app/","knowsAbout":["श्रीराम कथा","रामचरितमानस","भक्ति","सत्संग"]}]}</script>
 </head>
@@ -205,11 +214,17 @@ footer{text-align:center;background:#32111a;color:#ddcdb8;padding:26px 15px;font
  <div><h1>श्री मनोहर रामायणी जी महाराज</h1><p>रामकथा • भक्ति • सत्संग • सनातन संस्कार<br>महाराज श्री से जुड़ी जानकारी और आध्यात्मिक सामग्री का एक सरल मंच।</p></div>
  <div class="intro-symbol">ॐ</div>
 </section>
+<section class="daily-thought" aria-live="polite" aria-label="आज का सुविचार">
+ <div class="daily-kicker">✦ प्रतिदिन एक नया विचार</div>
+ <h2>आज का सुविचार</h2>
+ <p class="daily-quote" id="dailyQuote">प्रेम, सेवा और सदाचार से ही जीवन में सच्ची सुंदरता आती है।</p>
+ <div class="daily-date" id="dailyDate"></div>
+</section>
 <h2 class="section-heading">मुख्य अनुभाग</h2>
 <div class="section-grid">
  <details class="info-section" id="parichay"><summary><span class="section-icon">🙏</span><span class="section-label"><strong>महाराज श्री का परिचय</strong><small>संक्षिप्त परिचय और आध्यात्मिक यात्रा</small></span><span class="section-arrow">⌄</span></summary><div class="section-content"><p>श्री मनोहर रामायणी जी महाराज से जुड़े परिचय, आध्यात्मिक विचारों और सेवाकार्यों की जानकारी इस अनुभाग में साझा की जाएगी।</p><div class="section-tags"><span>परिचय</span><span>आध्यात्मिक विचार</span><span>सेवा</span></div></div></details>
  <details class="info-section" id="katha"><summary><span class="section-icon">📖</span><span class="section-label"><strong>श्रीराम कथा एवं प्रवचन</strong><small>कथा, सत्संग और प्रवचन सामग्री</small></span><span class="section-arrow">⌄</span></summary><div class="section-content"><h3>श्रीराम कथा और सत्संग</h3><p>रामचरितमानस के पावन प्रसंगों के माध्यम से धर्म, कर्तव्य, करुणा और पारिवारिक संस्कारों की सीख। महाराज श्री के वास्तविक प्रवचन वीडियो उपलब्ध होने पर यहाँ जोड़े जाएँगे।</p><div class="video-placeholder"><div><div class="play">▶</div><strong>प्रवचन वीडियो</strong><div style="font-size:11px;margin-top:4px;color:#ead8bb">वीडियो शीघ्र उपलब्ध होगा</div></div></div></div></details>
- <details class="info-section" id="sandesh"><summary><span class="section-icon">🌼</span><span class="section-label"><strong>भक्ति संदेश एवं विचार</strong><small>प्रेरक संदेश और सद्विचार</small></span><span class="section-arrow">⌄</span></summary><div class="section-content"><h3>राम नाम का महत्व</h3><p>प्रभु श्रीराम का स्मरण मन को शांति, विचारों को पवित्रता और जीवन को मर्यादा का मार्ग दिखाता है। अपने दैनिक जीवन में प्रेम, सेवा और सदाचार को स्थान दें।</p><div class="quote">“सियाराम मय सब जग जानी।<br>करउँ प्रनाम जोरि जुग पानी॥”</div><p style="margin-top:12px">सच्ची भक्ति हमारे व्यवहार में दिखाई दे—वाणी में मधुरता, मन में करुणा और कर्म में सेवा का भाव।</p></div></details>
+ <details class="info-section" id="sandesh"><summary><span class="section-icon">🌼</span><span class="section-label"><strong>भक्ति संदेश एवं विचार</strong><small>आज का सुविचार और प्रेरक विचार</small></span><span class="section-arrow">⌄</span></summary><div class="section-content"><h3>राम नाम का महत्व</h3><p>प्रभु श्रीराम का स्मरण मन को शांति, विचारों को पवित्रता और जीवन को मर्यादा का मार्ग दिखाता है। अपने दैनिक जीवन में प्रेम, सेवा और सदाचार को स्थान दें।</p><div class="quote">“सियाराम मय सब जग जानी।<br>करउँ प्रनाम जोरि जुग पानी॥”</div><p style="margin-top:12px">सच्ची भक्ति हमारे व्यवहार में दिखाई दे—वाणी में मधुरता, मन में करुणा और कर्म में सेवा का भाव।</p></div></details>
  <details class="info-section" id="gallery"><summary><span class="section-icon">🖼️</span><span class="section-label"><strong>फोटो एवं वीडियो गैलरी</strong><small>कथा, सत्संग और आयोजनों की झलकियाँ</small></span><span class="section-arrow">⌄</span></summary><div class="section-content"><p>कथा, सत्संग और धार्मिक आयोजनों की वास्तविक तस्वीरें एवं वीडियो यहाँ साझा किए जाएँगे।</p><div class="gallery-mini"><span>🪔</span><span>🌼</span><span>📿</span><span>🙏</span></div></div></details>
  <details class="info-section" id="karyakram"><summary><span class="section-icon">🗓️</span><span class="section-label"><strong>कथा एवं कार्यक्रम</strong><small>आगामी आयोजन और कार्यक्रम विवरण</small></span><span class="section-arrow">⌄</span></summary><div class="section-content"><p>महाराज श्री की कथा, सत्संग एवं धार्मिक कार्यक्रमों की प्रमाणित तिथि, समय और स्थान की जानकारी उपलब्ध होने पर इस अनुभाग में प्रकाशित की जाएगी।</p></div></details>
  <details class="info-section" id="sampark"><summary><span class="section-icon">✉️</span><span class="section-label"><strong>संपर्क एवं जानकारी</strong><small>कार्यक्रम और संपर्क से संबंधित विवरण</small></span><span class="section-arrow">⌄</span></summary><div class="section-content"><p>कार्यक्रम आयोजन एवं संपर्क का प्रमाणित विवरण उपलब्ध होने पर यहाँ प्रकाशित किया जाएगा।</p></div></details>
@@ -218,5 +233,52 @@ footer{text-align:center;background:#32111a;color:#ddcdb8;padding:26px 15px;font
 </main>
 <footer><strong>श्री मनोहर रामायणी जी महाराज</strong><br>रामकथा • भक्ति • सत्संग<br>© 2026 सर्वाधिकार सुरक्षित</footer>
 <nav class="mobile-bottom"><a href="#home"><b>⌂</b>होम</a><a href="#parichay"><b>☼</b>परिचय</a><a href="#sandesh"><b>▤</b>संदेश</a><a href="#katha"><b>▶</b>वीडियो</a><a href="#gallery"><b>▦</b>गैलरी</a></nav>
-<script>document.querySelectorAll('.head-links a').forEach(a=>a.addEventListener('click',()=>{document.querySelector('.head-links').classList.remove('open');document.querySelector('.hamb').setAttribute('aria-expanded','false')}));</script>
+<script>document.querySelectorAll('.head-links a').forEach(a=>a.addEventListener('click',()=>{document.querySelector('.head-links').classList.remove('open');document.querySelector('.hamb').setAttribute('aria-expanded','false')}));
+const dailyThoughts = [
+"प्रभु का नाम केवल होंठों पर नहीं, अपने आचरण में भी बसाइए।",
+"जहाँ विनम्रता होती है, वहाँ ज्ञान और प्रेम दोनों फलते हैं।",
+"दूसरों के जीवन में आशा जगाना भी एक सुंदर सेवा है।",
+"मन को शांत रखना है तो अपेक्षा कम और कृतज्ञता अधिक रखिए।",
+"सच्ची भक्ति वही है जो व्यवहार में करुणा बनकर दिखाई दे।",
+"समय बदलता है, पर अच्छे कर्मों की सुगंध बनी रहती है।",
+"वाणी ऐसी रखिए जो टूटे हुए मन को भी सहारा दे सके।",
+"जिस हृदय में प्रभु का स्मरण है, वहाँ निराशा अधिक देर नहीं ठहरती।",
+"सेवा का अवसर मिले तो उसे सौभाग्य समझकर स्वीकार कीजिए।",
+"क्रोध पर विजय, स्वयं पर विजय पाने की पहली सीढ़ी है।",
+"धन से सुविधा मिलती है, संतोष से सच्ची शांति मिलती है।",
+"हर दिन एक अच्छा विचार और एक अच्छा कर्म जीवन को बदल सकता है।",
+"दूसरों की भूल देखने से पहले अपने मन को देखना सीखिए।",
+"प्रेम बाँटने से घटता नहीं, बल्कि और अधिक बढ़ता है।",
+"कठिन समय में धैर्य रखिए; प्रभु पर विश्वास मन को शक्ति देता है।",
+"जो मिला है उसके लिए धन्यवाद, जो करना है उसके लिए पुरुषार्थ।",
+"परिवार में मधुर वाणी और परस्पर सम्मान ही सच्चे संस्कार हैं।",
+"अहंकार दूर हो तो ज्ञान अपने आप मार्ग दिखाने लगता है।",
+"किसी का अपमान न करना भी धर्म का सुंदर पालन है।",
+"राम नाम का स्मरण मन को मर्यादा, साहस और शांति देता है।",
+"सफलता में सरल रहिए और कठिनाई में धैर्यवान।",
+"मनुष्य की पहचान उसके पद से नहीं, उसके व्यवहार से होती है।",
+"जहाँ क्षमा है, वहाँ संबंधों को फिर से खिलने का अवसर मिलता है।",
+"अपने कर्म पवित्र रखिए, फल की चिंता प्रभु पर छोड़ दीजिए।",
+"सत्संग वह दीपक है जो विचारों के अंधकार को दूर करता है।",
+"छोटी-सी नेक पहल भी किसी के लिए बड़ा सहारा बन सकती है।",
+"ईश्वर को पाने का मार्ग निर्मल मन और निष्कपट प्रेम से होकर जाता है।",
+"दूसरों के सुख में प्रसन्न होना भी उदार हृदय की पहचान है।",
+"आज का समय व्यर्थ न जाने दें; यही कल का सुंदर भविष्य बनाता है।",
+"संकट में घबराइए नहीं, विवेक और विश्वास दोनों साथ रखिए।",
+"भक्ति का सार है—मन में श्रद्धा, वाणी में मधुरता और कर्म में सेवा।"
+];
+function updateDailyThought(){
+ const parts=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Kolkata',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
+ const val=Object.fromEntries(parts.map(p=>[p.type,p.value]));
+ const today=new Date(Number(val.year),Number(val.month)-1,Number(val.day));
+ const first=new Date(today.getFullYear(),0,0);
+ const day=Math.floor((today-first)/86400000);
+ const index=(day-1)%dailyThoughts.length;
+ const quote=document.getElementById('dailyQuote');
+ const date=document.getElementById('dailyDate');
+ if(quote) quote.textContent='“'+dailyThoughts[index]+'”';
+ if(date) date.textContent=new Intl.DateTimeFormat('hi-IN',{timeZone:'Asia/Kolkata',day:'numeric',month:'long',year:'numeric'}).format(new Date())+' · आज का विचार';
+}
+updateDailyThought();
+</script>
 </body></html>
