@@ -217,19 +217,6 @@ footer{text-align:center;background:#32111a;color:#ddcdb8;padding:26px 15px;font
 
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://manohar-ramayani-maharaj.vercel.app/#website","url":"https://manohar-ramayani-maharaj.vercel.app/","name":"श्री मनोहर रामायणी जी महाराज","inLanguage":"hi-IN","description":"रामकथा, भक्ति, सत्संग और आध्यात्मिक संदेश।"},{"@type":"Person","@id":"https://manohar-ramayani-maharaj.vercel.app/#person","name":"श्री मनोहर रामायणी जी महाराज","url":"https://manohar-ramayani-maharaj.vercel.app/","knowsAbout":["श्रीराम कथा","रामचरितमानस","भक्ति","सत्संग"]}]}
-/* Bottom mobile navigation opens the selected accordion section directly */
-document.querySelectorAll('.mobile-bottom a').forEach(link=>{
-  link.addEventListener('click',event=>{
-    const targetId=link.getAttribute('href');
-    if(!targetId || !targetId.startsWith('#')) return;
-    const target=document.querySelector(targetId);
-    if(!target) return;
-    event.preventDefault();
-    if(target.matches('details.info-section')) target.open=true;
-    history.replaceState(null,'',targetId);
-    target.scrollIntoView({behavior:'smooth',block:'start'});
-  });
-});
 </script>
 </head>
 <body><div class="top"></div>
@@ -317,5 +304,21 @@ function updateLiveDateTime(){
 updateLiveDateTime();
 setInterval(updateLiveDateTime,1000);
 
+
+// Bottom menu: open the requested section, then scroll it below the sticky header.
+document.querySelectorAll('.mobile-bottom a').forEach(link=>{
+  link.addEventListener('click',function(event){
+    const id=this.getAttribute('href');
+    const section=id && document.getElementById(id.slice(1));
+    if(!section) return;
+    event.preventDefault();
+    document.querySelectorAll('.info-section[open]').forEach(item=>{
+      if(item!==section) item.open=false;
+    });
+    if(section.matches('details.info-section')) section.open=true;
+    history.replaceState(null,'',id);
+    requestAnimationFrame(()=>section.scrollIntoView({behavior:'smooth',block:'start'}));
+  });
+});
 </script>
 </body></html>
