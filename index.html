@@ -165,35 +165,58 @@ footer{text-align:center;background:#32111a;color:#ddcdb8;padding:26px 15px;font
  footer{padding-bottom:25px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Section-first homepage: concise overview with expandable content panels */
+.section-home{max-width:1380px;margin:28px auto 70px;padding:0 34px}
+.intro-strip{background:linear-gradient(115deg,#4a1724,#762e38 62%,#9a6547);color:#fff5e4;border-radius:20px;padding:30px 34px;display:flex;align-items:center;justify-content:space-between;gap:24px;box-shadow:0 14px 35px #42241a18}
+.intro-strip h1{font:clamp(25px,3vw,38px) 'Tiro Devanagari Hindi',serif;margin:0 0 7px}
+.intro-strip p{margin:0;color:#f1dfc7;font-size:14px;line-height:1.8}
+.intro-symbol{font-size:64px;color:#e9cb91;flex:0 0 auto}
+.section-heading{font:25px 'Tiro Devanagari Hindi',serif;color:var(--wine);margin:30px 2px 14px}
+.section-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;align-items:start}
+.info-section{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:95px}
+.info-section summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:19px 20px;min-height:91px}
+.info-section summary::-webkit-details-marker{display:none}
+.section-icon{width:47px;height:47px;border-radius:14px;background:#f5ecdd;color:var(--wine);display:grid;place-items:center;font-size:23px;flex:0 0 auto}
+.section-label{min-width:0;flex:1}
+.section-label strong{display:block;color:var(--wine);font:19px 'Tiro Devanagari Hindi',serif}
+.section-label small{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+.section-arrow{color:#9b7b4c;font-size:19px;transition:transform .2s}
+.info-section[open] .section-arrow{transform:rotate(180deg)}
+.section-content{border-top:1px solid #f0e9df;padding:17px 21px 21px;color:#655950;font-size:14px;line-height:1.95}
+.section-content p{margin:0 0 11px}
+.section-content p:last-child{margin-bottom:0}
+.section-content h3{font:18px 'Tiro Devanagari Hindi',serif;color:var(--wine);margin:2px 0 8px}
+.section-content .quote{margin-top:12px}
+.section-content .video-placeholder{min-height:150px}
+.section-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.section-tags span{background:#f7f1e7;border:1px solid #eee2cf;border-radius:20px;padding:5px 10px;font-size:11px;color:#79583b}
+.short-note{margin-top:19px;padding:15px 18px;background:#f5eee2;border-radius:13px;color:#77685b;font-size:13px;line-height:1.8}
+@media(max-width:900px){.section-home{padding:0 18px}.section-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.section-home{margin:12px auto 78px;padding:0 10px}.intro-strip{padding:21px 18px;border-radius:14px;gap:10px}.intro-strip h1{font-size:24px;line-height:1.5}.intro-strip p{font-size:12px}.intro-symbol{font-size:43px}.section-heading{font-size:21px;margin:22px 3px 10px}.section-grid{grid-template-columns:1fr;gap:10px}.info-section{border-radius:12px}.info-section summary{min-height:76px;padding:13px 14px;gap:11px}.section-icon{width:42px;height:42px;border-radius:12px;font-size:21px}.section-label strong{font-size:17px}.section-label small{font-size:11px}.section-content{padding:14px 16px 17px;font-size:13px}.short-note{font-size:12px;margin-top:13px}}
+
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://manohar-ramayani-maharaj.vercel.app/#website","url":"https://manohar-ramayani-maharaj.vercel.app/","name":"श्री मनोहर रामायणी जी महाराज","inLanguage":"hi-IN","description":"रामकथा, भक्ति, सत्संग और आध्यात्मिक संदेश।"},{"@type":"Person","@id":"https://manohar-ramayani-maharaj.vercel.app/#person","name":"श्री मनोहर रामायणी जी महाराज","url":"https://manohar-ramayani-maharaj.vercel.app/","knowsAbout":["श्रीराम कथा","रामचरितमानस","भक्ति","सत्संग"]}]}</script>
 </head>
 <body><div class="top"></div>
-<header><div class="head"><a class="brand" href="#home"><span class="brand-icon">ॐ</span>श्री मनोहर रामायणी जी महाराज</a><button class="hamb" aria-label="मेन्यू" aria-expanded="false" onclick="let n=document.querySelector('.head-links');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">☰</button><nav class="head-links"><a href="#home">होम</a><a href="#parichay">परिचय</a><a href="#posts">संदेश</a><a href="#katha">कथा एवं वीडियो</a><a href="#gallery">गैलरी</a><a class="follow" href="#sampark">संपर्क करें</a></nav></div></header>
-<main class="page" id="home">
-<section class="profile-card">
- <div class="cover"><div class="cover-content"><div class="cover-om">ॐ</div><h1>श्री मनोहर रामायणी जी महाराज</h1><p>॥ श्री सीतारामाय नमः ॥ · रामकथा · भक्ति · सत्संग</p></div></div>
- <div class="profile-info"><div class="avatar" aria-label="आध्यात्मिक प्रोफाइल प्रतीक">ॐ</div><div class="profile-title"><h2>श्री मनोहर रामायणी जी महाराज</h2><p>आध्यात्मिक विचार • रामकथा • सनातन संस्कृति</p></div><div class="profile-actions"><a class="action" href="#posts">✦ संदेश पढ़ें</a><a class="action" href="#katha">▶ प्रवचन</a></div></div>
- <nav class="tabs"><a href="#home">मुख्य पृष्ठ</a><a href="#parichay">परिचय</a><a href="#posts">पोस्ट</a><a href="#katha">वीडियो</a><a href="#gallery">फोटो</a></nav>
+<header><div class="head"><a class="brand" href="#home"><span class="brand-icon">ॐ</span>श्री मनोहर रामायणी जी महाराज</a><button class="hamb" aria-label="मेन्यू" aria-expanded="false" onclick="let n=document.querySelector('.head-links');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">☰</button><nav class="head-links"><a href="#home">होम</a><a href="#parichay">परिचय</a><a href="#sandesh">संदेश</a><a href="#katha">कथा एवं वीडियो</a><a href="#karyakram">कार्यक्रम</a><a href="#gallery">गैलरी</a><a class="follow" href="#sampark">संपर्क करें</a></nav></div></header>
+<main class="section-home" id="home">
+<section class="intro-strip">
+ <div><h1>श्री मनोहर रामायणी जी महाराज</h1><p>रामकथा • भक्ति • सत्संग • सनातन संस्कार<br>महाराज श्री से जुड़ी जानकारी और आध्यात्मिक सामग्री का एक सरल मंच।</p></div>
+ <div class="intro-symbol">ॐ</div>
 </section>
-<div class="layout">
-<aside class="left">
- <section class="panel" id="parichay"><h3>परिचय</h3><p>श्री मनोहर रामायणी जी महाराज से जुड़े आध्यात्मिक विचारों, रामकथा, प्रवचनों और सत्संग की जानकारी भक्तों तक पहुँचाने का विनम्र मंच।</p></section>
- <section class="panel"><h3>त्वरित जानकारी</h3><div class="quick"><b>📖</b> श्रीराम कथा</div><div class="quick"><b>🎙</b> आध्यात्मिक प्रवचन</div><div class="quick"><b>🙏</b> भक्ति एवं सत्संग</div><div class="quick"><b>🌼</b> सनातन संस्कार</div></section>
-</aside>
-<section class="feed" id="posts"><h2 class="feed-title">आध्यात्मिक पोस्ट एवं संदेश</h2>
- <article class="post"><div class="post-head"><div class="mini-avatar">ॐ</div><div><strong>श्री मनोहर रामायणी जी महाराज</strong><small>आध्यात्मिक संदेश</small></div></div><div class="post-body"><h3>राम नाम का महत्व</h3><p>प्रभु श्रीराम का स्मरण मन को शांति, विचारों को पवित्रता और जीवन को मर्यादा का मार्ग दिखाता है। आइए, अपने दैनिक जीवन में प्रेम, सेवा और सदाचार को स्थान दें।</p><div class="quote">“सियाराम मय सब जग जानी।<br>करउँ प्रनाम जोरि जुग पानी॥”</div></div><div class="post-actions"><span>🙏 जय श्रीराम</span><span>✦ भक्ति संदेश</span></div></article>
- <article class="post" id="katha"><div class="post-head"><div class="mini-avatar">📖</div><div><strong>कथा एवं प्रवचन</strong><small>श्रवण • मनन • जीवन में आचरण</small></div></div><div class="post-body"><h3>श्रीराम कथा और सत्संग</h3><p>रामचरितमानस के पावन प्रसंगों के माध्यम से धर्म, कर्तव्य, करुणा और परिवारिक संस्कारों की सीख। महाराज श्री के वास्तविक प्रवचन वीडियो उपलब्ध होने पर यहाँ जोड़े जाएँगे।</p><div class="video-placeholder"><div><div class="play">▶</div><strong>प्रवचन वीडियो</strong><div style="font-size:11px;margin-top:4px;color:#ead8bb">वीडियो शीघ्र उपलब्ध होगा</div></div></div></div><div class="post-actions"><span>🎙 प्रवचन</span><span>🪔 सत्संग</span></div></article>
- <article class="post"><div class="post-head"><div class="mini-avatar">🌺</div><div><strong>भक्ति और संस्कार</strong><small>प्रेरक विचार</small></div></div><div class="post-body"><h3>सेवा, प्रेम और सदाचार</h3><p>सच्ची भक्ति का भाव हमारे व्यवहार में दिखाई देना चाहिए—वाणी में मधुरता, मन में करुणा और कर्म में सेवा का भाव।</p></div><div class="post-actions"><span>🌼 सद्विचार</span><span>🙏 जय सियाराम</span></div></article>
-</section>
-<aside class="right">
- <section class="panel side-highlight"><h3>॥ जय श्री राम ॥</h3><p>राम नाम का आश्रय जीवन को सरल, सुंदर और सार्थक बनाता है।</p><div class="quick"><b>ॐ</b> भक्ति • ज्ञान • संस्कार</div></section>
- <section class="panel" id="gallery"><h3>फोटो एवं वीडियो</h3><p>कथा, सत्संग और धार्मिक आयोजनों की वास्तविक तस्वीरें यहाँ साझा की जाएँगी।</p><div class="gallery-mini"><span>🪔</span><span>🌼</span><span>📿</span><span>🙏</span></div></section>
- <section class="panel" id="sampark"><h3>संपर्क जानकारी</h3><p>कार्यक्रम एवं संपर्क का प्रमाणित विवरण उपलब्ध होने पर यहाँ प्रकाशित किया जाएगा।</p></section>
-</aside>
+<h2 class="section-heading">मुख्य अनुभाग</h2>
+<div class="section-grid">
+ <details class="info-section" id="parichay"><summary><span class="section-icon">🙏</span><span class="section-label"><strong>महाराज श्री का परिचय</strong><small>संक्षिप्त परिचय और आध्यात्मिक यात्रा</small></span><span class="section-arrow">⌄</span></summary><div class="section-content"><p>श्री मनोहर रामायणी जी महाराज से जुड़े परिचय, आध्यात्मिक विचारों और सेवाकार्यों की जानकारी इस अनुभाग में साझा की जाएगी।</p><div class="section-tags"><span>परिचय</span><span>आध्यात्मिक विचार</span><span>सेवा</span></div></div></details>
+ <details class="info-section" id="katha"><summary><span class="section-icon">📖</span><span class="section-label"><strong>श्रीराम कथा एवं प्रवचन</strong><small>कथा, सत्संग और प्रवचन सामग्री</small></span><span class="section-arrow">⌄</span></summary><div class="section-content"><h3>श्रीराम कथा और सत्संग</h3><p>रामचरितमानस के पावन प्रसंगों के माध्यम से धर्म, कर्तव्य, करुणा और पारिवारिक संस्कारों की सीख। महाराज श्री के वास्तविक प्रवचन वीडियो उपलब्ध होने पर यहाँ जोड़े जाएँगे।</p><div class="video-placeholder"><div><div class="play">▶</div><strong>प्रवचन वीडियो</strong><div style="font-size:11px;margin-top:4px;color:#ead8bb">वीडियो शीघ्र उपलब्ध होगा</div></div></div></div></details>
+ <details class="info-section" id="sandesh"><summary><span class="section-icon">🌼</span><span class="section-label"><strong>भक्ति संदेश एवं विचार</strong><small>प्रेरक संदेश और सद्विचार</small></span><span class="section-arrow">⌄</span></summary><div class="section-content"><h3>राम नाम का महत्व</h3><p>प्रभु श्रीराम का स्मरण मन को शांति, विचारों को पवित्रता और जीवन को मर्यादा का मार्ग दिखाता है। अपने दैनिक जीवन में प्रेम, सेवा और सदाचार को स्थान दें।</p><div class="quote">“सियाराम मय सब जग जानी।<br>करउँ प्रनाम जोरि जुग पानी॥”</div><p style="margin-top:12px">सच्ची भक्ति हमारे व्यवहार में दिखाई दे—वाणी में मधुरता, मन में करुणा और कर्म में सेवा का भाव।</p></div></details>
+ <details class="info-section" id="gallery"><summary><span class="section-icon">🖼️</span><span class="section-label"><strong>फोटो एवं वीडियो गैलरी</strong><small>कथा, सत्संग और आयोजनों की झलकियाँ</small></span><span class="section-arrow">⌄</span></summary><div class="section-content"><p>कथा, सत्संग और धार्मिक आयोजनों की वास्तविक तस्वीरें एवं वीडियो यहाँ साझा किए जाएँगे।</p><div class="gallery-mini"><span>🪔</span><span>🌼</span><span>📿</span><span>🙏</span></div></div></details>
+ <details class="info-section" id="karyakram"><summary><span class="section-icon">🗓️</span><span class="section-label"><strong>कथा एवं कार्यक्रम</strong><small>आगामी आयोजन और कार्यक्रम विवरण</small></span><span class="section-arrow">⌄</span></summary><div class="section-content"><p>महाराज श्री की कथा, सत्संग एवं धार्मिक कार्यक्रमों की प्रमाणित तिथि, समय और स्थान की जानकारी उपलब्ध होने पर इस अनुभाग में प्रकाशित की जाएगी।</p></div></details>
+ <details class="info-section" id="sampark"><summary><span class="section-icon">✉️</span><span class="section-label"><strong>संपर्क एवं जानकारी</strong><small>कार्यक्रम और संपर्क से संबंधित विवरण</small></span><span class="section-arrow">⌄</span></summary><div class="section-content"><p>कार्यक्रम आयोजन एवं संपर्क का प्रमाणित विवरण उपलब्ध होने पर यहाँ प्रकाशित किया जाएगा।</p></div></details>
 </div>
+<div class="short-note">यहाँ ऊपर केवल हर अनुभाग की छोटी-सी जानकारी दिखाई देती है। पूरा विवरण पढ़ने के लिए संबंधित अनुभाग पर टैप या क्लिक करें।</div>
 </main>
 <footer><strong>श्री मनोहर रामायणी जी महाराज</strong><br>रामकथा • भक्ति • सत्संग<br>© 2026 सर्वाधिकार सुरक्षित</footer>
-<nav class="mobile-bottom"><a href="#home"><b>⌂</b>होम</a><a href="#parichay"><b>☼</b>परिचय</a><a href="#posts"><b>▤</b>पोस्ट</a><a href="#katha"><b>▶</b>वीडियो</a><a href="#gallery"><b>▦</b>गैलरी</a></nav>
+<nav class="mobile-bottom"><a href="#home"><b>⌂</b>होम</a><a href="#parichay"><b>☼</b>परिचय</a><a href="#sandesh"><b>▤</b>संदेश</a><a href="#katha"><b>▶</b>वीडियो</a><a href="#gallery"><b>▦</b>गैलरी</a></nav>
 <script>document.querySelectorAll('.head-links a').forEach(a=>a.addEventListener('click',()=>{document.querySelector('.head-links').classList.remove('open');document.querySelector('.hamb').setAttribute('aria-expanded','false')}));</script>
 </body></html>
