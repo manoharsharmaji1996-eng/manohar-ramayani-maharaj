@@ -215,7 +215,7 @@ footer{text-align:center;background:#32111a;color:#ddcdb8;padding:26px 15px;font
 .gov-time-label small{font-size:10px;color:#8b765e}
 @media(max-width:640px){.gov-date-inner{padding:5px 12px;gap:12px;font-size:10px;justify-content:space-between}.gov-date-label,.gov-time-label{gap:4px}}
 
-</style>
+.daily-meaning{max-width:760px;margin:12px auto 0;color:#6b5145;font:15px/1.9 "Hind",sans-serif;text-align:center}.daily-quote{white-space:pre-line}</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://manohar-ramayani-maharaj.vercel.app/#website","url":"https://manohar-ramayani-maharaj.vercel.app/","name":"श्री मनोहर रामायणी जी महाराज","inLanguage":"hi-IN","description":"रामकथा, भक्ति, सत्संग और आध्यात्मिक संदेश।"},{"@type":"Person","@id":"https://manohar-ramayani-maharaj.vercel.app/#person","name":"श्री मनोहर रामायणी जी महाराज","url":"https://manohar-ramayani-maharaj.vercel.app/","knowsAbout":["श्रीराम कथा","रामचरितमानस","भक्ति","सत्संग"]}]}
 </script>
 </head>
@@ -228,9 +228,9 @@ footer{text-align:center;background:#32111a;color:#ddcdb8;padding:26px 15px;font
  <div class="intro-symbol">ॐ</div>
 </section>
 <section class="daily-thought" aria-live="polite" aria-label="आज का सुविचार">
- <div class="daily-kicker">✦ प्रतिदिन एक नया विचार</div>
- <h2>आज का सुविचार</h2>
- <p class="daily-quote" id="dailyQuote">प्रेम, सेवा और सदाचार से ही जीवन में सच्ची सुंदरता आती है।</p>
+ <div class="daily-kicker">✦ श्रीरामचरितमानस की वाणी</div>
+ <h2>आज की मानस चौपाई</h2>
+ <p class="daily-quote" id="dailyQuote">परहित सरिस धरम नहि भाई। पर पीड़ा सम नहि अधमाई॥</p><p class="daily-meaning" id="dailyMeaning">अर्थ: दूसरों का भला करने के समान कोई धर्म नहीं और दूसरों को कष्ट पहुँचाने के समान कोई पाप नहीं।</p>
  <div class="daily-date" id="dailyDate"></div>
 </section>
 <h2 class="section-heading">मुख्य अनुभाग</h2>
@@ -248,37 +248,17 @@ footer{text-align:center;background:#32111a;color:#ddcdb8;padding:26px 15px;font
 <nav class="mobile-bottom"><a href="#home"><b>⌂</b>होम</a><a href="#parichay"><b>☼</b>परिचय</a><a href="#sandesh"><b>▤</b>संदेश</a><a href="#katha"><b>▶</b>वीडियो</a><a href="#gallery"><b>▦</b>गैलरी</a></nav>
 <script>document.querySelectorAll('.head-links a').forEach(a=>a.addEventListener('click',()=>{document.querySelector('.head-links').classList.remove('open');document.querySelector('.hamb').setAttribute('aria-expanded','false')}));
 const dailyThoughts = [
-"प्रभु का नाम केवल होंठों पर नहीं, अपने आचरण में भी बसाइए।",
-"जहाँ विनम्रता होती है, वहाँ ज्ञान और प्रेम दोनों फलते हैं।",
-"दूसरों के जीवन में आशा जगाना भी एक सुंदर सेवा है।",
-"मन को शांत रखना है तो अपेक्षा कम और कृतज्ञता अधिक रखिए।",
-"सच्ची भक्ति वही है जो व्यवहार में करुणा बनकर दिखाई दे।",
-"समय बदलता है, पर अच्छे कर्मों की सुगंध बनी रहती है।",
-"वाणी ऐसी रखिए जो टूटे हुए मन को भी सहारा दे सके।",
-"जिस हृदय में प्रभु का स्मरण है, वहाँ निराशा अधिक देर नहीं ठहरती।",
-"सेवा का अवसर मिले तो उसे सौभाग्य समझकर स्वीकार कीजिए।",
-"क्रोध पर विजय, स्वयं पर विजय पाने की पहली सीढ़ी है।",
-"धन से सुविधा मिलती है, संतोष से सच्ची शांति मिलती है।",
-"हर दिन एक अच्छा विचार और एक अच्छा कर्म जीवन को बदल सकता है।",
-"दूसरों की भूल देखने से पहले अपने मन को देखना सीखिए।",
-"प्रेम बाँटने से घटता नहीं, बल्कि और अधिक बढ़ता है।",
-"कठिन समय में धैर्य रखिए; प्रभु पर विश्वास मन को शक्ति देता है।",
-"जो मिला है उसके लिए धन्यवाद, जो करना है उसके लिए पुरुषार्थ।",
-"परिवार में मधुर वाणी और परस्पर सम्मान ही सच्चे संस्कार हैं।",
-"अहंकार दूर हो तो ज्ञान अपने आप मार्ग दिखाने लगता है।",
-"किसी का अपमान न करना भी धर्म का सुंदर पालन है।",
-"राम नाम का स्मरण मन को मर्यादा, साहस और शांति देता है।",
-"सफलता में सरल रहिए और कठिनाई में धैर्यवान।",
-"मनुष्य की पहचान उसके पद से नहीं, उसके व्यवहार से होती है।",
-"जहाँ क्षमा है, वहाँ संबंधों को फिर से खिलने का अवसर मिलता है।",
-"अपने कर्म पवित्र रखिए, फल की चिंता प्रभु पर छोड़ दीजिए।",
-"सत्संग वह दीपक है जो विचारों के अंधकार को दूर करता है।",
-"छोटी-सी नेक पहल भी किसी के लिए बड़ा सहारा बन सकती है।",
-"ईश्वर को पाने का मार्ग निर्मल मन और निष्कपट प्रेम से होकर जाता है।",
-"दूसरों के सुख में प्रसन्न होना भी उदार हृदय की पहचान है।",
-"आज का समय व्यर्थ न जाने दें; यही कल का सुंदर भविष्य बनाता है।",
-"संकट में घबराइए नहीं, विवेक और विश्वास दोनों साथ रखिए।",
-"भक्ति का सार है—मन में श्रद्धा, वाणी में मधुरता और कर्म में सेवा।"
+ {verse:"परहित सरिस धरम नहि भाई।\\nपर पीड़ा सम नहि अधमाई॥",meaning:"दूसरों का भला करने के समान कोई धर्म नहीं और दूसरों को कष्ट पहुँचाने के समान कोई पाप नहीं।"},
+ {verse:"सिया राममय सब जग जानी।\\nकरउँ प्रनाम जोरि जुग पानी॥",meaning:"समस्त संसार में सीता-राम का ही स्वरूप देखकर कवि सबको हाथ जोड़कर प्रणाम करते हैं। यह हर प्राणी में ईश्वर को देखने की सीख है।"},
+ {verse:"निर्मल मन जन सो मोहि पावा।\\nमोहि कपट छल छिद्र न भावा॥",meaning:"ईश्वर को वही प्राप्त कर सकता है जिसका मन निर्मल हो; छल-कपट और दोषपूर्ण भावना उन्हें प्रिय नहीं।"},
+ {verse:"रामहि केवल प्रेमु पिआरा।\\nजानि लेउ जो जाननिहारा॥",meaning:"भगवान श्रीराम को निष्कपट प्रेम ही प्रिय है। सच्ची भक्ति का आधार प्रेम और समर्पण है।"},
+ {verse:"बिनु सतसंग बिबेक न होई।\\nराम कृपा बिनु सुलभ न सोई॥",meaning:"सत्संग के बिना विवेक जागृत नहीं होता और सत्संग भी प्रभु की कृपा से सहज प्राप्त होता है।"},
+ {verse:"सठ सुधरहिं सतसंगति पाई।\\nपारस परस कुधात सुहाई॥",meaning:"जैसे पारस के स्पर्श से साधारण धातु सुंदर हो जाती है, वैसे ही अच्छी संगति से बुरे स्वभाव में भी सुधार आ सकता है।"},
+ {verse:"मंगल भवन अमंगल हारी।\\nद्रवउ सो दसरथ अजिर बिहारी॥",meaning:"हे मंगल के धाम और अमंगल को दूर करने वाले दशरथनंदन श्रीराम! हम पर कृपा कीजिए।"},
+ {verse:"दैहिक दैविक भौतिक तापा।\\nराम राज नहिं काहुहि ब्यापा॥",meaning:"रामराज्य में किसी को शारीरिक, दैवी या भौतिक कष्ट नहीं सताते; यह आदर्श शासन और लोककल्याण का चित्र है।"},
+ {verse:"धीरज धरम मित्र अरु नारी।\\nआपद काल परिखिअहिं चारी॥",meaning:"धैर्य, धर्म, मित्र और जीवनसाथी—इन चारों की सच्ची पहचान विपत्ति के समय होती है।"},
+ {verse:"होइहि सोइ जो राम रचि राखा।\\nको करि तर्क बढ़ावै साखा॥",meaning:"जो प्रभु ने निश्चित किया है, अंततः वही होता है; व्यर्थ तर्क और चिंता में उलझने के बजाय धैर्य रखना चाहिए।"},
+ {verse:"संत हृदय नवनीत समाना।\\nकहा कबिन्ह परि कहै न जाना॥",meaning:"संतों का हृदय मक्खन के समान कोमल और दयालु होता है; वे दूसरों के दुःख से द्रवित हो उठते हैं।"}
 ];
 function updateDailyThought(){
  const parts=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Kolkata',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
@@ -286,11 +266,13 @@ function updateDailyThought(){
  const today=new Date(Number(val.year),Number(val.month)-1,Number(val.day));
  const first=new Date(today.getFullYear(),0,0);
  const day=Math.floor((today-first)/86400000);
- const index=(day-1)%dailyThoughts.length;
+ const item=dailyThoughts[(day-1)%dailyThoughts.length];
  const quote=document.getElementById('dailyQuote');
+ const meaning=document.getElementById('dailyMeaning');
  const date=document.getElementById('dailyDate');
- if(quote) quote.textContent='“'+dailyThoughts[index]+'”';
- if(date) date.textContent=new Intl.DateTimeFormat('hi-IN',{timeZone:'Asia/Kolkata',day:'numeric',month:'long',year:'numeric'}).format(new Date())+' · आज का विचार';
+ if(quote) quote.textContent='“'+item.verse+'”';
+ if(meaning) meaning.textContent='अर्थ: '+item.meaning;
+ if(date) date.textContent='श्रीरामचरितमानस की चौपाई · '+new Intl.DateTimeFormat('hi-IN',{timeZone:'Asia/Kolkata',day:'numeric',month:'long',year:'numeric'}).format(new Date());
 }
 updateDailyThought();
 
