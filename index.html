@@ -249,6 +249,54 @@ footer{text-align:center;background:#32111a;color:#ddcdb8;padding:26px 15px;font
 .yt-bottom-link{margin-top:22px;padding:14px;border-top:1px solid #eee7df;color:#74685f;font-size:12px;line-height:1.7}
 @media(max-width:760px){.yt-layout{grid-template-columns:64px minmax(0,1fr)}.yt-sidebar{padding:12px 6px}.yt-sidebar a{justify-content:center;padding:13px 4px;font-size:18px}.yt-sidebar a span{display:none}.yt-side-line{margin:10px 3px}.yt-main{padding:13px 12px}.yt-video-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px 10px}.yt-appbar{padding:0 10px;gap:8px}.yt-left{min-width:auto;gap:8px}.yt-menu{display:none}.yt-logo{font-size:17px}.yt-sign{padding:7px 9px;font-size:11px}.yt-channel-banner{padding:13px}.yt-avatar{width:52px;height:52px;flex-basis:52px;font-size:24px}.yt-channel-banner h2{font-size:15px}}
 @media(max-width:420px){.yt-video-grid{grid-template-columns:1fr}.yt-search{height:34px}.yt-search input{font-size:12px;padding:0 9px}.yt-search button{width:38px}.yt-main{padding:10px}.yt-sidebar{width:54px}.yt-layout{grid-template-columns:54px minmax(0,1fr)}}
+
+/* Responsive YouTube-like experience: desktop sidebar, phone bottom navigation */
+.yt-app{width:100%;max-width:none;border-radius:12px}
+@media(min-width:1100px){
+ .yt-layout{grid-template-columns:205px minmax(0,1fr)}
+ .yt-main{padding:24px 28px}
+ .yt-video-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:22px 17px}
+ .yt-sidebar{padding:20px 12px}
+ .yt-channel-banner{padding:22px 24px}
+}
+@media(min-width:761px) and (max-width:1099px){
+ .yt-video-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:760px){
+ .yt-app{border:0;border-radius:0;box-shadow:none;margin:0 -10px;width:calc(100% + 20px);background:#fff}
+ .yt-appbar{height:54px;position:sticky;top:0;z-index:5;padding:0 12px;border-bottom:1px solid #eee}
+ .yt-left{min-width:auto;gap:0}.yt-logo{font-size:18px}
+ .yt-search{max-width:none;height:35px;margin-left:auto;flex:1}
+ .yt-sign{font-size:11px;padding:6px 9px}
+ .yt-layout{display:flex;flex-direction:column;min-height:0}
+ .yt-main{order:1;padding:12px 12px 18px}
+ .yt-sidebar{order:2;display:flex;justify-content:space-around;align-items:center;gap:0;padding:7px 2px calc(7px + env(safe-area-inset-bottom));border-right:0;border-top:1px solid #e9e5df;background:#fff;position:sticky;bottom:0;z-index:6}
+ .yt-sidebar a{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:3px;margin:0;padding:5px 1px;border-radius:7px;font-size:17px;line-height:1.1}
+ .yt-sidebar a span{display:block;font-size:9px;white-space:nowrap}
+ .yt-side-line{display:none}
+ .yt-channel-banner{padding:12px;gap:11px;border-radius:10px}
+ .yt-avatar{width:48px;height:48px;flex-basis:48px;font-size:22px}
+ .yt-channel-banner h2{font-size:14px;line-height:1.4}
+ .yt-channel-banner p{font-size:11px}
+ .yt-chips{padding:13px 0 12px;gap:7px}
+ .yt-chips a{padding:7px 12px;font-size:12px}
+ .yt-heading{font-size:16px;margin:15px 0 11px}
+ .yt-video-grid{grid-template-columns:1fr;gap:17px}
+ .yt-thumb{border-radius:10px;aspect-ratio:16/9}
+ .yt-card-info{padding:8px 2px}
+ .yt-card-info strong{font-size:13px}
+ .yt-cat-art{aspect-ratio:16/9}
+ .yt-inline-player{margin-top:15px;padding:9px}
+ .yt-bottom-link{margin-top:14px}
+}
+@media(max-width:390px){
+ .yt-appbar{gap:7px;padding:0 8px}
+ .yt-logo{font-size:16px}
+ .yt-sign{padding:6px 7px;font-size:10px}
+ .yt-search input{font-size:11px}
+ .yt-channel-banner h2{font-size:13px}
+ .yt-sidebar a span{font-size:8px}
+}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://manohar-ramayani-maharaj.vercel.app/#website","url":"https://manohar-ramayani-maharaj.vercel.app/","name":"श्री मनोहर रामायणी जी महाराज","inLanguage":"hi-IN","description":"रामकथा, भक्ति, सत्संग और आध्यात्मिक संदेश।"},{"@type":"Person","@id":"https://manohar-ramayani-maharaj.vercel.app/#person","name":"श्री मनोहर रामायणी जी महाराज","url":"https://manohar-ramayani-maharaj.vercel.app/","knowsAbout":["श्रीराम कथा","रामचरितमानस","भक्ति","सत्संग"]}]}
 </script>
