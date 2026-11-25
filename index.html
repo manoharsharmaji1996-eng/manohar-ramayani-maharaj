@@ -44,6 +44,59 @@ header{height:66px;position:sticky;top:0;z-index:20;background:#fffdf9ed;backdro
 .gallery-mini{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}.gallery-mini span{min-height:66px;border-radius:8px;background:linear-gradient(135deg,#eee2cb,#d9c29a);display:grid;place-items:center;color:#75452f;font-size:23px}
 footer{text-align:center;background:#32111a;color:#ddcdb8;padding:26px 15px;font-size:12px;line-height:2}footer strong{font:19px 'Tiro Devanagari Hindi',serif;color:#e8c987}
 .mobile-bottom{display:none}
+/* Desktop refinement: spacious editorial layout, stronger hierarchy */
+@media(min-width:901px){
+ .page{max-width:1320px;margin:34px auto 76px;padding:0 30px}
+ .head{max-width:1320px;padding:0 30px}
+ .profile-card{border-radius:18px;box-shadow:0 14px 42px #42241a12}
+ .cover{height:310px;justify-items:start;text-align:left;padding-left:9%;background:radial-gradient(circle at 78% 42%,#a66b48 0,#6b2a31 34%,#3d1724 78%)}
+ .cover:before{left:auto;right:11%;width:430px;height:430px}
+ .cover:after{left:auto;right:calc(11% + 80px);width:270px;height:270px}
+ .cover-content{max-width:620px}
+ .cover-om{font-size:58px}
+ .cover h1{font-size:48px;line-height:1.35}
+ .cover p{font-size:13px;letter-spacing:2px}
+ .profile-info{padding:0 38px 20px;min-height:120px;gap:22px}
+ .avatar{width:126px;height:126px;flex-basis:126px;margin-top:-48px;font-size:54px}
+ .profile-title h2{font-size:29px}
+ .profile-title p{font-size:14px}
+ .action{padding:11px 19px;font-size:14px}
+ .tabs{padding:0 38px;gap:38px}
+ .tabs a{font-size:15px;padding:17px 3px 14px}
+ .layout{grid-template-columns:300px minmax(0,1fr) 275px;gap:24px;margin-top:25px}
+ .panel,.post{border-radius:16px}
+ .panel{padding:23px;margin-bottom:19px}
+ .panel h3{font-size:21px;margin-bottom:14px}
+ .panel p{font-size:14px;line-height:1.95}
+ .quick{font-size:14px;padding:12px 0}
+ .quick b{width:36px;height:36px}
+ .feed-title{font-size:25px;margin:3px 0 16px}
+ .post{margin-bottom:20px;transition:transform .2s,box-shadow .2s}
+ .post:hover{transform:translateY(-2px);box-shadow:0 12px 34px #42241a12}
+ .post-head{padding:19px 22px 13px;gap:13px}
+ .mini-avatar{width:45px;height:45px;font-size:22px}
+ .post-head strong{font-size:15px}
+ .post-head small{font-size:12px}
+ .post-body{padding:6px 24px 22px}
+ .post-body h3{font-size:24px;margin:5px 0 10px}
+ .post-body p{font-size:15px;line-height:2}
+ .quote{padding:23px;font-size:23px;margin-top:17px}
+ .post-actions{padding:13px 23px;font-size:13px}
+ .video-placeholder{min-height:225px}
+ .right{position:sticky;top:90px}
+ .gallery-mini span{min-height:82px;font-size:26px}
+ footer{padding:34px 15px;font-size:13px}
+}
+@media(min-width:641px) and (max-width:900px){
+ .page{max-width:900px;margin:22px auto 55px;padding:0 20px}
+ .cover{height:245px}
+ .layout{grid-template-columns:250px minmax(0,1fr);gap:17px}
+ .profile-info{padding-left:20px;padding-right:20px}
+ .profile-title h2{font-size:22px}
+ .profile-actions{gap:6px}
+ .action{padding:8px 10px}
+ .post-body{padding-left:16px;padding-right:16px}
+}
 @media(max-width:900px){.layout{grid-template-columns:245px minmax(0,1fr)}.right{display:none}.head-links{gap:15px}}
 @media(max-width:640px){
  header{height:58px}.head{padding:0 13px}.brand{font-size:16px;gap:8px}.brand-icon{width:35px;height:35px;font-size:22px}.hamb{display:block}.head-links{display:none;position:absolute;top:58px;left:10px;right:10px;background:white;border:1px solid var(--line);border-radius:12px;padding:12px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:0}.head-links.open{display:flex}.head-links a{padding:12px}.follow{text-align:center}
