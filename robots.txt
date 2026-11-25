@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://manoharsharmaji1996-eng.github.io/manohar-ramayani-maharaj/sitemap.xml
