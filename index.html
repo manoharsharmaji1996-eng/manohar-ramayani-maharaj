@@ -269,7 +269,7 @@ function updateDailyThought(){
  const quote=document.getElementById('dailyQuote');
  const meaning=document.getElementById('dailyMeaning');
  const date=document.getElementById('dailyDate');
- if(quote) quote.textContent='“'+item.verse+'”';
+ if(quote) quote.innerHTML='“'+item.verse.split(/\\n|\\\\n|\\/n|\\r?\\n/).join('<br>')+'”';
  if(meaning) meaning.textContent='अर्थ: '+item.meaning;
  if(date) date.textContent='श्रीरामचरितमानस की चौपाई · '+new Intl.DateTimeFormat('hi-IN',{timeZone:'Asia/Kolkata',day:'numeric',month:'long',year:'numeric'}).format(new Date());
 }
