@@ -216,7 +216,21 @@ footer{text-align:center;background:#32111a;color:#ddcdb8;padding:26px 15px;font
 @media(max-width:640px){.gov-date-inner{padding:5px 12px;gap:12px;font-size:10px;justify-content:space-between}.gov-date-label,.gov-time-label{gap:4px}}
 
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://manohar-ramayani-maharaj.vercel.app/#website","url":"https://manohar-ramayani-maharaj.vercel.app/","name":"श्री मनोहर रामायणी जी महाराज","inLanguage":"hi-IN","description":"रामकथा, भक्ति, सत्संग और आध्यात्मिक संदेश।"},{"@type":"Person","@id":"https://manohar-ramayani-maharaj.vercel.app/#person","name":"श्री मनोहर रामायणी जी महाराज","url":"https://manohar-ramayani-maharaj.vercel.app/","knowsAbout":["श्रीराम कथा","रामचरितमानस","भक्ति","सत्संग"]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://manohar-ramayani-maharaj.vercel.app/#website","url":"https://manohar-ramayani-maharaj.vercel.app/","name":"श्री मनोहर रामायणी जी महाराज","inLanguage":"hi-IN","description":"रामकथा, भक्ति, सत्संग और आध्यात्मिक संदेश।"},{"@type":"Person","@id":"https://manohar-ramayani-maharaj.vercel.app/#person","name":"श्री मनोहर रामायणी जी महाराज","url":"https://manohar-ramayani-maharaj.vercel.app/","knowsAbout":["श्रीराम कथा","रामचरितमानस","भक्ति","सत्संग"]}]}
+/* Bottom mobile navigation opens the selected accordion section directly */
+document.querySelectorAll('.mobile-bottom a').forEach(link=>{
+  link.addEventListener('click',event=>{
+    const targetId=link.getAttribute('href');
+    if(!targetId || !targetId.startsWith('#')) return;
+    const target=document.querySelector(targetId);
+    if(!target) return;
+    event.preventDefault();
+    if(target.matches('details.info-section')) target.open=true;
+    history.replaceState(null,'',targetId);
+    target.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+</script>
 </head>
 <body><div class="top"></div>
 <div class="gov-datebar"><div class="gov-date-inner"><span class="gov-date-label">🗓️ <b id="liveDate">तिथि लोड हो रही है…</b></span><span class="gov-time-label">🕒 <b id="liveTime">--:--:--</b> <small>IST</small></span></div></div>
